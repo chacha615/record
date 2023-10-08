@@ -1,0 +1,35 @@
+反位输出
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n = 0,t=0;
+	scanf_s("%d", &n);
+	while (n / 10 != 0)
+	{
+		t = n % 10;
+	    n = n / 10;
+		printf("%d", t);
+	}
+	printf("%d", n);
+	return 0;
+}
+判断素数
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n = 0,i=0;
+	scanf_s("%d", &n);
+	for (i = 2; i < n; i++)
+	{
+		if (n%i == 0)尤其注意这里是取余
+		{
+			printf("No");
+			break;
+		}
+	}
+	if (n == i)
+		printf("Yes");
+	return 0;
+}
