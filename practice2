@@ -1,0 +1,46 @@
+判断输入字符类型
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char n;
+	scanf_s("%c", &n);
+	if (n >= 48&&n <= 57)
+		printf("字符类型是：数字");
+	else if((n>=65&&n<=90)||(n>=97&&n<=122))
+		printf("字符类型是：字母");
+	else if(n<32)
+		printf("字符类型是：判断字符");
+	else
+		printf("字符类型是：其他字符");
+	return 0;
+}
+输入学生成绩，输出学生等级 用switch语句
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n = 0;
+	scanf_s("%d", &n);
+	switch (n / 10)
+	{
+	    case 0://注意后面是冒号不是分号
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			printf("不及格");//可以将不及格的合并在一起
+			break;
+		case 6:
+		case 7:
+			printf("及格");
+			break;
+		case 8:
+			printf("良好");
+		case 9:
+		case 10://注意为10非11
+			printf("优秀");
+
+	}
+	return 0;
